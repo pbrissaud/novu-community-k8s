@@ -93,8 +93,6 @@ spec:
           env:
             - name: NODE_ENV
               value : {{print .Values.api.env.NODE_ENV | quote }}
-            - name: API_ROOT_URL
-              value : {{  .Values.web.apiExternalEndpoint }}
             - name: PORT
               value : {{ print .Values.worker.port | quote }}
             - name: MONGO_MIN_POOL_SIZE

@@ -724,7 +724,9 @@ worker:
   ##   - name: FOO
   ##     value: "bar"
   ##
-  extraEnvVars: []
+  extraEnvVars:
+    - name: API_ROOT_URL
+      value: http://novu-api:3000
   ## @param worker.extraEnvVarsCM Name of existing ConfigMap containing extra env vars for novu worker nodes
   ##
   extraEnvVarsCM: ''
