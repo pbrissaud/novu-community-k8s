@@ -1709,6 +1709,8 @@ store:
   ##
   encryption-key: '' # you need to change this !
 
+secretKey: '' # you need to change this !
+
 ## @section Mongodb configuration
 ##
 

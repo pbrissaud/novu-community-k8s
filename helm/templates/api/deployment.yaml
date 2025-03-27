@@ -94,7 +94,9 @@ spec:
             - name: NODE_ENV
               value: {{print .Values.api.env.NODE_ENV | quote }}
             - name: API_ROOT_URL
-              value : {{print  .Values.api.env.API_ROOT_URL | quote }}
+              value : {{print .Values.api.env.API_ROOT_URL | quote }}
+            - name: NOVU_SECRET_KEY
+              value: {{print .Values.secretKey | quote }}
             - name: DISABLE_USER_REGISTRATION
               value : {{print  .Values.api.env.DISABLE_USER_REGISTRATION | quote }}
             - name: PORT
