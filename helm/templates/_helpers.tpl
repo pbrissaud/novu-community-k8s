@@ -184,6 +184,17 @@ Return MongoDB fullname
 {{- include "common.names.dependency.fullname" (dict "chartName" "mongodb" "chartValues" .Values.mongodb "context" $) -}}
 {{- end -}}
 
+{{/* 
+Return mongo protocol
+*/}}
+{{- define "novu.mongodb.protocol" -}}
+{{- if .Values.externalDatabase.protocol -}}
+    {{- print .Values.externalDatabase.protocol -}}
+{{- else -}}
+    {{- print "mongodb://" -}}
+{{- end -}}
+{{- end -}}
+
 {{/*
 Return mongodb host
 */}}
